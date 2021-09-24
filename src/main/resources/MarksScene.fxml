@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MarksController">
+    <Button fx:id="overviewButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchToOverviewScene" text="Back" AnchorPane.leftAnchor="14.0">
+        <font>
+          <Font name="Calibri" size="14.0" />
+        </font>
+    </Button>
+    <TableView fx:id="marksTable" prefHeight="350.0" prefWidth="600.0">
+      <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="75.0" resizable="false" style="-fx-alignment: CENTER;" text="Date" />
+          <TableColumn fx:id="subjectColumn" prefWidth="348.0" resizable="false" text="Subject" />
+          <TableColumn fx:id="markColumn" prefWidth="75.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Mark" />
+          <TableColumn fx:id="weightColumn" prefWidth="100.0" resizable="false" style="-fx-alignment: CENTER;" text="Weight" />
+      </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    <ComboBox fx:id="comboBox" layoutX="431.0" layoutY="360.0" onAction="#filterSubject" prefHeight="27.0" prefWidth="150.0" promptText="Choose subject" AnchorPane.leftAnchor="431.0" AnchorPane.rightAnchor="14.0" />
+    <ToggleButton fx:id="switchMarksToggle" layoutX="310.0" layoutY="360.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setSwitchMarksToggle" prefWidth="111.2" text="All marks" AnchorPane.rightAnchor="180.0">
+        <font>
+          <Font name="Calibri" size="14.0" />
+        </font>
+    </ToggleButton>
+   <TableView fx:id="avgTable" disable="true" layoutY="285.0" prefHeight="65.0" prefWidth="600.0" visible="false">
+      <columns>
+         <TableColumn fx:id="avgSubjectCol" prefWidth="425.0" resizable="false" text="Subject" />
+         <TableColumn fx:id="avgMarkCol" prefWidth="175.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Mark" />
+      </columns>
+   </TableView>
+</AnchorPane>

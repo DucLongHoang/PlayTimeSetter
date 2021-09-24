@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OverviewController">
+   <TableView fx:id="markTimeTable" layoutX="52.0" layoutY="78.0" prefHeight="148.0" prefWidth="152.0">
+      <columns>
+         <TableColumn fx:id="markColumn" maxWidth="50.0" prefWidth="50.0" resizable="false" sortable="false" style="-fx-alignment: CENTER;" text="Mark" />
+         <TableColumn fx:id="timeColumn" maxWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" style="-fx-alignment: CENTER;" text="Time change" />
+      </columns>
+   </TableView>
+   <Button fx:id="marksButton" layoutX="75.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchToMarksScene" prefHeight="26.0" prefWidth="150.0" text="See grades">
+      <font>
+         <Font name="Calibri" size="14.0" />
+      </font>
+   </Button>
+   <Button fx:id="setTimeButton" layoutX="375.0" layoutY="360.0" mnemonicParsing="false" onAction="#setTime" prefHeight="26.0" prefWidth="150.0" text="Set time">
+      <font>
+         <Font name="Calibri" size="14.0" />
+      </font>
+   </Button>
+   <Text layoutX="52.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional/reduced play time:" textAlignment="CENTER" wrappingWidth="280.0">
+      <font>
+         <Font name="Calibri Bold" size="18.0" />
+      </font>
+   </Text>
+   <Slider fx:id="saturdaySlider" blockIncrement="15.0" layoutX="50.0" layoutY="252.0" majorTickUnit="15.0" max="180.0" min="-60.0" minorTickCount="0" onMouseDragged="#setPlayTime" onMouseReleased="#setPlayTime" prefHeight="40.0" prefWidth="500.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+   <Label layoutX="40.0" layoutY="234.0" text="Saturday">
+      <font>
+         <Font name="Calibri" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="40.0" layoutY="292.0" text="Sunday">
+      <font>
+         <Font name="Calibri" size="14.0" />
+      </font>
+   </Label>
+   <Slider fx:id="sundaySlider" blockIncrement="15.0" layoutX="50.0" layoutY="310.0" majorTickUnit="15.0" max="180.0" min="-60.0" minorTickCount="0" onMouseDragged="#setPlayTime" onMouseReleased="#setPlayTime" prefHeight="40.0" prefWidth="500.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+   <Label fx:id="playTimeLabel" layoutX="332.0" layoutY="40.0" prefHeight="22.0" prefWidth="122.0" text="time">
+      <font>
+         <Font name="Calibri" size="18.0" />
+      </font>
+   </Label>
+   <Text layoutX="245.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " textAlignment="RIGHT" wrappingWidth="63.79998779296875">
+      <font>
+         <Font name="Calibri Bold" size="18.0" />
+      </font>
+   </Text>
+   <Label fx:id="dateLabel" layoutX="332.0" layoutY="64.0" prefHeight="28.0" prefWidth="210.0" text="date">
+      <font>
+         <Font name="Calibri" size="18.0" />
+      </font>
+   </Label>
+   <Circle fill="WHITE" layoutX="309.0" layoutY="168.0" radius="49.0" stroke="BLACK" strokeType="INSIDE" />
+   <Label fx:id="finalTime" layoutX="268.0" layoutY="157.0" prefHeight="22.0" prefWidth="82.0" text="playTime" textAlignment="CENTER">
+      <font>
+         <Font name="Calibri" size="18.0" />
+      </font>
+   </Label>
+</AnchorPane>
