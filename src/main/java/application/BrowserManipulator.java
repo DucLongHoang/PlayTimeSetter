@@ -44,8 +44,8 @@ public class BrowserManipulator {
         driver.get("https://skola.plzen-edu.cz");
 
         // login
-        driver.findElement(By.xpath("//input[@id='uwt_ctl00_JmenoUzivatele']")).sendKeys("Khoi Nguyen");
-        driver.findElement(By.xpath("//input[@id='uwt_ctl00_HesloUzivatele']")).sendKeys("filip2007");
+        driver.findElement(By.xpath("//input[@id='uwt_ctl00_JmenoUzivatele']")).sendKeys("");
+        driver.findElement(By.xpath("//input[@id='uwt_ctl00_HesloUzivatele']")).sendKeys("");
         driver.findElement(By.xpath("//button[@id='uwt_ctl00_SignIn']")).click();
 /*
         // change academic year
@@ -112,10 +112,10 @@ public class BrowserManipulator {
         driver.get("https://account.microsoft.com/family/settings/screen-time/3578722689714235306/devices");
 
         // login
-        driver.findElement(By.xpath("//input[@id='i0116']")).sendKeys("long18.12.1999@email.cz");
+        driver.findElement(By.xpath("//input[@id='i0116']")).sendKeys("");
         driver.findElement(By.xpath("//input[@id='idSIButton9']")).click();
         Thread.sleep(1500);
-        driver.findElement(By.xpath("//input[@id='i0118']")).sendKeys("batman1999");
+        driver.findElement(By.xpath("//input[@id='i0118']")).sendKeys("");
         driver.findElement(By.xpath("//input[@id='idSIButton9']")).click();
         driver.findElement(By.xpath("//input[@id='idBtn_Back']")).click();
         Thread.sleep(1500);
